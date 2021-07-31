@@ -1,15 +1,15 @@
 <html>
 <body>
   <?php
-    require 'back/recipesLoaders.php';
+    require 'recipesLoaders.php';
     $articles = loadRecipes();
 
     foreach ($articles as $article) {
       $title = $article['title'];
       $preparationTime = $article['preparationTime'];
       $timer = $article['timer'];
-      $difficulty = ['difficulty'];
-      require 'front/article.php';
+      $difficulty = $article['difficulty'];
+      require 'article.php';
   };
   ?>
 </body>
